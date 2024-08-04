@@ -4,8 +4,10 @@ from django.http import HttpResponse
 
 
 def blog(request):
-    return render(request, 'blog/index.html')
+    context = {'name': 'blog context', 'title': 'Blog'}
+    return render(request, 'blog/index.html', context)
 
 
 def posts(request):
-    return HttpResponse("This is the blog post")
+    context = {'name': 'blog posts'}
+    return HttpResponse("This is the blog post", context)

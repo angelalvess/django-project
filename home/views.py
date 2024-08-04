@@ -5,7 +5,9 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'home/index.html')
+
+    context = {'name': 'Rahuls', 'title': 'Home'}
+    return render(request, 'home/index.html', context)
 
 
 def abc(request):
