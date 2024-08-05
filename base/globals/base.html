@@ -1,11 +1,19 @@
 {% include 'globals/partials/head.html' %}
 {% include 'globals/partials/nav.html' %}
 
-    <h1>
-        {% block texto %}
-       
-        {% endblock texto %}
-    </h1>
+
+
+{% if name %}
+    <h1> {% block texto %}{% endblock texto %}</h1>
+{% endif %}
+
+
+
+
+<main class="content">
+    {% block posts %}{% endblock posts %}
+</main>
+
 </body>
 
 </html>

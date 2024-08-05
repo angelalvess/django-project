@@ -8,3 +8,39 @@ body {
     background: #f0f0f0;
 
 }
+
+.content {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.post {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 600px) {
+    .content:not(:has(.single-post)) {
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    }
+}
+
+.menu {
+    background-color: black;
+    padding: 1.5rem;
+
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
